@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+    
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<LangVersion>10.0</LangVersion>
+		<Nullable>enable</Nullable>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+	    <FileVersion>1.0.0.0</FileVersion>
+	    <Version>1.0.0</Version>
+
+	    <Authors>Andreas Nägeli</Authors>
+	    <Company />
+
+	    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	    <PackageProjectUrl>https://genhttp.org/</PackageProjectUrl>
+
+	    <Description>Library to mock HTTP responses in an integration or acceptance test written in C#.</Description>
+	    <PackageTags>Mock HTTP Requests Response Web Webserver Server Test Testing Integration</PackageTags>
+
+	    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+	    <IncludeSymbols>true</IncludeSymbols>
+	    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	  
+	</PropertyGroup>
+
+	<ItemGroup>
+
+		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
+
+		<PackageReference Include="GenHTTP.Core" Version="6.1.0" />
+
+		<PackageReference Include="GenHTTP.Modules.Functional" Version="6.1.0" />
+
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+
+	</ItemGroup>
+
+</Project>
