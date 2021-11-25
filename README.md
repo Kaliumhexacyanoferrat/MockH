@@ -4,6 +4,7 @@
 
 This library allows to mock HTTP responses for integration and acceptance tests of your projects written in C# / .NET by hosting a webserver returning configured responses.
 
+- Fast and thread safe
 - Only a few dependencies
 - Does not interfer with Kestrel or ASP.NET
 - Independent from the testing framework
