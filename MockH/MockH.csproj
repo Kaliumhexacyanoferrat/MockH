@@ -18,10 +18,10 @@
 	    <Company />
 
 	    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-	    <PackageProjectUrl>https://genhttp.org/</PackageProjectUrl>
+	    <PackageProjectUrl>https://github.com/Kaliumhexacyanoferrat/MockH</PackageProjectUrl>
 
 	    <Description>Library to mock HTTP responses in an integration or acceptance test written in C#.</Description>
-	    <PackageTags>Mock HTTP Requests Response Web Webserver Server Test Testing Integration</PackageTags>
+	    <PackageTags>Mock Mocking HTTP Requests Request Response Web Webserver Server Test Testing Component Integration Acceptance</PackageTags>
 
 	    <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	    <IncludeSymbols>true</IncludeSymbols>
