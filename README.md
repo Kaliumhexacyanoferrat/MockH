@@ -2,13 +2,13 @@
 
 [![CI](https://github.com/Kaliumhexacyanoferrat/MockH/actions/workflows/ci.yml/badge.svg)](https://github.com/Kaliumhexacyanoferrat/MockH/actions/workflows/ci.yml) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Kaliumhexacyanoferrat_MockH&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Kaliumhexacyanoferrat_MockH) [![nuget Package](https://img.shields.io/nuget/v/MockH.svg)](https://www.nuget.org/packages/MockH/)
 
-This library allows to mock HTTP responses for integration and acceptance tests of your projects written in C# / .NET by hosting a webserver returning configured responses.
+This library allows to mock HTTP responses for integration and acceptance tests of your projects written in C# / .NET 6 by hosting a webserver returning configured responses.
 
 - Fast and thread safe
 - Only a few dependencies
 - No configuration needed
 - Does not interfer with Kestrel or ASP.NET
-- Independent from the testing framework
+- Independent from the testing framework in place
 
 ## Usage
 
@@ -41,7 +41,7 @@ On.Get("/ifail").Respond(ResponseStatus.InternalServerError);
 On.Get().Redirect("https://github.com");
 
 // execute logic and return some simple text value
-On.Get().Run(() => 42);
+On.Get().Run(() => "42");
 
 // execute logic and return some JSON
 private record MyClass(int IntValue, string StringValue);
@@ -70,7 +70,8 @@ On.Post().Run((Stream body) => body.Length);
 // directly access request and response
 On.Get().Run((IRequest request) => request.Respond().Status(ResponseStatus.BadRequest));
 
-// return a handler provided by the GenHTTP framework, e.g. a website (see https://genhttp.org/documentation/content/)
+// return a handler provided by the GenHTTP framework, e.g. a website
+// see https://genhttp.org/documentation/content/
 // can be useful if you want to test some kind of website crawler
 On.Get().Run(() => Listing.From(ResourceTree.FromDirectory("/var/www")));
 ```
