@@ -5,7 +5,12 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MockH", "MockH\MockH.csproj", "{69AB1471-7E7D-4C76-BDD8-58CA8369649F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockH.Tests", "MockH.Tests\MockH.Tests.csproj", "{C5EA4883-2BBE-4F46-AC99-465DF6895958}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MockH.Tests", "MockH.Tests\MockH.Tests.csproj", "{C5EA4883-2BBE-4F46-AC99-465DF6895958}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{83377AA8-18D5-4CFF-9AE6-B11070952B2F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

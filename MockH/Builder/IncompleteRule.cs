@@ -1,5 +1,7 @@
 ﻿using GenHTTP.Api.Protocol;
 
+using Basics = GenHTTP.Modules.Basics;
+
 namespace MockH.Builder
 {
 
@@ -30,6 +32,12 @@ namespace MockH.Builder
         #region Functionality
 
         public Rule Return<T>(T data) => new(Methods, Path, () => data);
+
+        public Rule Redirect(string location, bool temporary = true) => new(Methods, Path, (IRequest request) => Basics.Redirect.To(location).Mode(temporary));
+
+        public Rule Run(Delegate action) => new(Methods, Path, action);
+
+        public Rule Respond(ResponseStatus status) => new(Methods, Path, (IRequest request) => request.Respond().Status(status).Build());
 
         #endregion
 
