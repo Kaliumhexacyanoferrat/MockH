@@ -9,7 +9,6 @@
 		<Nullable>enable</Nullable>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 
-
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
 	    <FileVersion>1.3.0.0</FileVersion>
 	    <Version>1.3.0</Version>
@@ -26,16 +25,19 @@
 	    <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	    <IncludeSymbols>true</IncludeSymbols>
 	    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-	  
+		
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>CS1591</NoWarn>
+	
 	</PropertyGroup>
 
 	<ItemGroup>
 
 		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
 
-		<PackageReference Include="GenHTTP.Core" Version="6.3.0" />
+		<PackageReference Include="GenHTTP.Core" Version="6.3.1" />
 
-		<PackageReference Include="GenHTTP.Modules.Functional" Version="6.3.0" />
+		<PackageReference Include="GenHTTP.Modules.Functional" Version="6.3.1" />
 
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
 
