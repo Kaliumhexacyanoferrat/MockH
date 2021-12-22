@@ -27,7 +27,6 @@
 	    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<NoWarn>CS1591</NoWarn>
 	
 	</PropertyGroup>
 

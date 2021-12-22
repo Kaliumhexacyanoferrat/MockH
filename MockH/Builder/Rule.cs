@@ -5,6 +5,10 @@ using GenHTTP.Modules.Functional.Provider;
 namespace MockH.Builder
 {
 
+    /// <summary>
+    /// A rule that can be executed by the mock server to determine
+    /// the response to be sent to a requesting client.
+    /// </summary>
     public class Rule
     {
 
@@ -20,7 +24,7 @@ namespace MockH.Builder
 
         #region Initialization
 
-        public Rule(HashSet<FlexibleRequestMethod> methods, string? path, Delegate action)
+        internal Rule(HashSet<FlexibleRequestMethod> methods, string? path, Delegate action)
         {
             Methods = methods;
             Path = path;
@@ -31,7 +35,7 @@ namespace MockH.Builder
 
         #region Functionality
 
-        public void AddTo(InlineBuilder builder)
+        internal void AddTo(InlineBuilder builder)
         {
             builder.On(Action, Methods, Path);
         }
