@@ -34,7 +34,7 @@
 
 		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
 
-		<PackageReference Include="GenHTTP.Core" Version="6.3.2" />
+		<PackageReference Include="GenHTTP.Core" Version="6.3.3" />
 
 		<PackageReference Include="GenHTTP.Modules.Functional" Version="6.3.2" />
 
