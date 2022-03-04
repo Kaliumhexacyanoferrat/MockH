@@ -15,7 +15,7 @@
 
 	<ItemGroup>
 
-		<PackageReference Include="GenHTTP.Modules.DirectoryBrowsing" Version="6.3.2" />
+		<PackageReference Include="GenHTTP.Modules.DirectoryBrowsing" Version="6.3.3" />
 
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
 
