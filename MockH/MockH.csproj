@@ -36,7 +36,7 @@
 
 		<PackageReference Include="GenHTTP.Core" Version="6.3.2" />
 
-		<PackageReference Include="GenHTTP.Modules.Functional" Version="6.3.2" />
+		<PackageReference Include="GenHTTP.Modules.Functional" Version="6.3.3" />
 
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
 
