@@ -21,7 +21,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 7.0.8
+        dotnet-version: 7.0.305
     - name: Setup Java JDK
       uses: actions/setup-java@v1
       with:
