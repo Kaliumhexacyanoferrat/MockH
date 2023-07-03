@@ -1,30 +1,30 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-    
-		<TargetFramework>net6.0</TargetFramework>
+
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<LangVersion>10.0</LangVersion>
 		<Nullable>enable</Nullable>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 
-        <AssemblyVersion>1.5.0.0</AssemblyVersion>
-	    <FileVersion>1.5.0.0</FileVersion>
-	    <Version>1.5.0</Version>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+	  <FileVersion>1.5.0.0</FileVersion>
+	  <Version>1.5.0</Version>
 
-	    <Authors>Andreas Nägeli</Authors>
-	    <Company />
+	  <Authors>Andreas Nägeli</Authors>
+	  <Company />
 
-	    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-	    <PackageProjectUrl>https://github.com/Kaliumhexacyanoferrat/MockH</PackageProjectUrl>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <PackageProjectUrl>https://github.com/Kaliumhexacyanoferrat/MockH</PackageProjectUrl>
 
-	    <Description>Library to mock HTTP responses in an integration or acceptance test written in C#.</Description>
-	    <PackageTags>Mock Mocking HTTP Requests Request Response Web Webserver Server Test Testing Component Integration Acceptance</PackageTags>
+	  <Description>Library to mock HTTP responses in an integration or acceptance test written in C#.</Description>
+	  <PackageTags>Mock Mocking HTTP Requests Request Response Web Webserver Server Test Testing Component Integration Acceptance</PackageTags>
 
-	    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-	    <IncludeSymbols>true</IncludeSymbols>
-	    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
+	  <IncludeSymbols>true</IncludeSymbols>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	
@@ -34,9 +34,9 @@
 
 		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
 
-		<PackageReference Include="GenHTTP.Core" Version="6.4.0" />
+		<PackageReference Include="GenHTTP.Core" Version="7.0.0" />
 
-		<PackageReference Include="GenHTTP.Modules.Functional" Version="6.4.0" />
+		<PackageReference Include="GenHTTP.Modules.Functional" Version="7.0.0" />
 
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
 

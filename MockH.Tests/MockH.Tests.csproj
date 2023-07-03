@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<LangVersion>10.0</LangVersion>
@@ -15,14 +15,14 @@
 
 	<ItemGroup>
 
-		<PackageReference Include="GenHTTP.Modules.DirectoryBrowsing" Version="6.4.0" />
+		<PackageReference Include="GenHTTP.Modules.DirectoryBrowsing" Version="7.0.0" />
 
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
 
-		<PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
-		<PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
+		<PackageReference Include="MSTest.TestAdapter" Version="3.0.4" />
+		<PackageReference Include="MSTest.TestFramework" Version="3.0.4" />
 
-		<PackageReference Include="coverlet.collector" Version="3.2.0">
+		<PackageReference Include="coverlet.collector" Version="6.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
