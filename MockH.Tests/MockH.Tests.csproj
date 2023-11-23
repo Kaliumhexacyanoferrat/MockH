@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 
-		<TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<LangVersion>10.0</LangVersion>
@@ -15,9 +15,9 @@
 
 	<ItemGroup>
 
-		<PackageReference Include="GenHTTP.Modules.DirectoryBrowsing" Version="7.0.0" />
+		<PackageReference Include="GenHTTP.Modules.DirectoryBrowsing" Version="8.0.0" />
 
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
 
 		<PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
 		<PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
