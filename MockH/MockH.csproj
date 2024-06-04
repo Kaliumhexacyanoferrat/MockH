@@ -9,7 +9,7 @@
 		<Nullable>enable</Nullable>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 
-    <AssemblyVersion>1.7.0.0</AssemblyVersion>
+		<AssemblyVersion>1.7.0.0</AssemblyVersion>
 	  <FileVersion>1.7.0.0</FileVersion>
 	  <Version>1.7.0</Version>
 
@@ -34,9 +34,9 @@
 
 		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
 
-		<PackageReference Include="GenHTTP.Core" Version="8.0.0" />
+		<PackageReference Include="GenHTTP.Core" Version="8.5.0" />
 
-		<PackageReference Include="GenHTTP.Modules.Functional" Version="8.0.0" />
+		<PackageReference Include="GenHTTP.Modules.Functional" Version="8.5.0" />
 
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
 
