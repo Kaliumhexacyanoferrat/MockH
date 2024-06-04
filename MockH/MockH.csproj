@@ -2,29 +2,29 @@
 
 	<PropertyGroup>
 
-    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<LangVersion>10.0</LangVersion>
 		<Nullable>enable</Nullable>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 
-		<AssemblyVersion>1.7.0.0</AssemblyVersion>
-	  <FileVersion>1.7.0.0</FileVersion>
-	  <Version>1.7.0</Version>
+		<AssemblyVersion>1.8.0.0</AssemblyVersion>
+		<FileVersion>1.8.0.0</FileVersion>
+		<Version>1.8.0</Version>
 
-	  <Authors>Andreas Nägeli</Authors>
-	  <Company />
+		<Authors>Andreas Nägeli</Authors>
+		<Company />
 
-	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
-	  <PackageProjectUrl>https://github.com/Kaliumhexacyanoferrat/MockH</PackageProjectUrl>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/Kaliumhexacyanoferrat/MockH</PackageProjectUrl>
 
-	  <Description>Library to mock HTTP responses in an integration or acceptance test written in C#.</Description>
-	  <PackageTags>Mock Mocking HTTP Requests Request Response Web Webserver Server Test Testing Component Integration Acceptance</PackageTags>
+		<Description>Library to mock HTTP responses in an integration or acceptance test written in C#.</Description>
+		<PackageTags>Mock Mocking HTTP Requests Request Response Web Webserver Server Test Testing Component Integration Acceptance</PackageTags>
 
-	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
-	  <IncludeSymbols>true</IncludeSymbols>
-	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	
