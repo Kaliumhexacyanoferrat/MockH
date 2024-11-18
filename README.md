@@ -66,8 +66,6 @@ On.Post().Run((Stream body) => body.Length);
 
 ## Advanced Usage
 
-You may use any handler provided by the underlying [GenHTTP framework](https://genhttp.org/documentation/content/).
-
 ```csharp
 // directly access request and response
 On.Get().Run((IRequest request) => request.Respond().Status(ResponseStatus.BadRequest));
