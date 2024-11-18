@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Kaliumhexacyanoferrat/MockH/actions/workflows/ci.yml/badge.svg)](https://github.com/Kaliumhexacyanoferrat/MockH/actions/workflows/ci.yml) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Kaliumhexacyanoferrat_MockH&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Kaliumhexacyanoferrat_MockH) [![nuget Package](https://img.shields.io/nuget/v/MockH.svg)](https://www.nuget.org/packages/MockH/)
 
-This library allows to mock HTTP responses for integration, component and acceptance tests of your projects written in C# / .NET 6/7/8 by hosting a webserver returning configured responses.
+This library allows to mock HTTP responses for integration, component and acceptance tests of your projects written in C# / .NET 8/9 by hosting a webserver returning configured responses.
 
 - Fast and thread safe
 - Only a few dependencies
@@ -18,7 +18,7 @@ using MockH;
 [TestMethod]
 public async Task TestSomething() 
 {
-   using var server = MockServer.Run
+   await using var server = await MockServer.RunAsync
    (
        On.Get("/users/1").Return(new User(...)),
        On.Get("/users/2").Respond(ResponseStatus.NoContent)

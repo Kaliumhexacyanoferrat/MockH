@@ -1,44 +1,41 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MockH.Tests
+namespace MockH.Tests;
+
+[TestClass]
+public class ServerTests : ServerTest
 {
 
-    [TestClass]
-    public class ServerTests : ServerTest
+    [TestMethod]
+    public async Task TestRelativeUrl()
     {
+        await using var server = await MockServer.RunAsync();
 
-        [TestMethod]
-        public void TestRelativeUrl()
-        {
-            using var server = MockServer.Run();
+        var url = server.Url("/api/users");
 
-            var url = server.Url("/api/users");
+        Assert.IsTrue(url.StartsWith("http://localhost:"));
+        Assert.IsTrue(url.EndsWith("/api/users"));
+    }
 
-            Assert.IsTrue(url.StartsWith("http://localhost:"));
-            Assert.IsTrue(url.EndsWith("/api/users"));
-        }
+    [TestMethod]
+    public async Task TestRelativeUrlWithoutSlash()
+    {
+        await using var server = await MockServer.RunAsync();
 
-        [TestMethod]
-        public void TestRelativeUrlWithoutSlash()
-        {
-            using var server = MockServer.Run();
+        var url = server.Url("api/users");
 
-            var url = server.Url("api/users");
+        Assert.IsTrue(url.StartsWith("http://localhost:"));
+        Assert.IsTrue(url.EndsWith("/api/users"));
+    }
 
-            Assert.IsTrue(url.StartsWith("http://localhost:"));
-            Assert.IsTrue(url.EndsWith("/api/users"));
-        }
+    [TestMethod]
+    public async Task TestAbsoluteUrl()
+    {
+        await using var server = await MockServer.RunAsync();
 
-        [TestMethod]
-        public void TestAbsoluteUrl()
-        {
-            using var server = MockServer.Run();
+        var url = server.Url("https://google.de");
 
-            var url = server.Url("https://google.de");
-
-            Assert.AreEqual("https://google.de", url);
-        }
-
+        Assert.AreEqual("https://google.de", url);
     }
 
 }
