@@ -1,7 +1,6 @@
 ﻿using GenHTTP.Api.Protocol;
 using GenHTTP.Modules.DirectoryBrowsing;
 using GenHTTP.Modules.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net;
 
 namespace MockH.Tests;

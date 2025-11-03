@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace MockH.Tests;
+﻿namespace MockH.Tests;
 
 [TestClass]
 public class ServerTests : ServerTest
@@ -13,8 +11,8 @@ public class ServerTests : ServerTest
 
         var url = server.Url("/api/users");
 
-        Assert.IsTrue(url.StartsWith("http://localhost:"));
-        Assert.IsTrue(url.EndsWith("/api/users"));
+        Assert.StartsWith("http://localhost:", url);
+        Assert.EndsWith("/api/users", url);
     }
 
     [TestMethod]
@@ -24,8 +22,8 @@ public class ServerTests : ServerTest
 
         var url = server.Url("api/users");
 
-        Assert.IsTrue(url.StartsWith("http://localhost:"));
-        Assert.IsTrue(url.EndsWith("/api/users"));
+        Assert.StartsWith("http://localhost:", url);
+        Assert.EndsWith("/api/users", url);
     }
 
     [TestMethod]
