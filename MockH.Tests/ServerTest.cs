@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-using MockH.Environment;
+﻿using MockH.Environment;
 
 namespace MockH.Tests;
 
@@ -12,7 +10,7 @@ public abstract class ServerTest
     });
 
     protected async ValueTask<string> GetStringAsync(Server server, string? path = null) => await _Client.GetStringAsync(server.Url(path));
-        
+
     protected async ValueTask<HttpResponseMessage> GetAsync(Server server, string? path = null) => await _Client.GetAsync(server.Url(path));
 
     protected async ValueTask<HttpResponseMessage> PostAsync(Server server, string value, string? path = null)

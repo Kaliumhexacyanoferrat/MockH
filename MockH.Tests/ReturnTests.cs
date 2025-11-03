@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace MockH.Tests;
+﻿namespace MockH.Tests;
 
 [TestClass]
 public class ReturnTests : ServerTest

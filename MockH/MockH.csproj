@@ -35,9 +35,9 @@
 
 		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
 
-		<PackageReference Include="GenHTTP.Core" Version="9.6.2" />
+		<PackageReference Include="GenHTTP.Core" Version="9.8.0" />
 
-		<PackageReference Include="GenHTTP.Modules.Functional" Version="9.6.2" />
+		<PackageReference Include="GenHTTP.Modules.Functional" Version="9.8.0" />
 
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
 

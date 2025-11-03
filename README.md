@@ -7,7 +7,7 @@ This library allows to mock HTTP responses for integration, component and accept
 - Fast and thread safe
 - Only a few dependencies
 - No configuration needed
-- Does not interfer with Kestrel or ASP.NET
+- Does not interfere with Kestrel or ASP.NET
 - Independent from the testing framework in place
 
 ## Usage

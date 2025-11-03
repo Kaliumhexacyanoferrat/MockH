@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Net;
+﻿using System.Net;
 
 namespace MockH.Tests;
 
