@@ -38,14 +38,8 @@ jobs:
       - name: Build solution
         run: dotnet build --configuration Release --no-restore
 
-      - name: Pack regular packages
+      - name: Pack packages
         run: dotnet pack --configuration Release -p:ContinuousIntegrationBuild=true --no-build --output ./artifacts
-
-      - name: Pack meta packages
-        working-directory: Packages
-        run: |
-          nuget pack GenHTTP.Core.nuspec -OutputDirectory ../artifacts
-          nuget pack GenHTTP.Core.Kestrel.nuspec -OutputDirectory ../artifacts
 
       - name: List gathered packages
         run: dir artifacts 
