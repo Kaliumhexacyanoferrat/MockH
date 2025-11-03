@@ -7,7 +7,11 @@
 public class StaticPortProvider : IPortProvider
 {
 
+#if NET8_0
     private static int _nextPort = 20000;
+#else
+    private static int _nextPort = 30000;
+#endif
 
     /// <summary>
     /// Fetches the next available port to be used.

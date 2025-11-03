@@ -10,14 +10,15 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<ImplicitUsings>true</ImplicitUsings>
 
-		<AssemblyVersion>1.10.0.0</AssemblyVersion>
-		<FileVersion>1.10.0.0</FileVersion>
-		<Version>1.10.0</Version>
+		<AssemblyVersion>1.11.0.0</AssemblyVersion>
+		<FileVersion>1.11.0.0</FileVersion>
+		<Version>1.11.0</Version>
 
 		<Authors>Andreas Nägeli</Authors>
 		<Company />
 
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageProjectUrl>https://github.com/Kaliumhexacyanoferrat/MockH</PackageProjectUrl>
 
 		<Description>Library to mock HTTP responses in an integration or acceptance test written in C#.</Description>
@@ -34,6 +35,7 @@
 	<ItemGroup>
 
 		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
 
 		<PackageReference Include="GenHTTP.Core" Version="9.8.0" />
 

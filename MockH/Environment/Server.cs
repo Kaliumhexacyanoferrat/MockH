@@ -13,7 +13,7 @@ namespace MockH.Environment;
 /// </summary>
 public class Server : IAsyncDisposable
 {
-    private bool _Disposed;
+    private bool _disposed;
 
     #region Get-/Setters
 
@@ -26,7 +26,7 @@ public class Server : IAsyncDisposable
 
         #endregion
 
-        #region Initialization
+    #region Initialization
 
     /// <summary>
     /// Creates and starts a new server instance with the given ruleset.
@@ -103,14 +103,14 @@ public class Server : IAsyncDisposable
     /// <param name="disposing">true, if managed resources should be disposed</param>
     protected virtual async ValueTask DisposeAsync(bool disposing)
     {
-        if (!_Disposed)
+        if (!_disposed)
         {
             if (disposing)
             {
                 await Host.StopAsync();
             }
 
-            _Disposed = true;
+            _disposed = true;
         }
     }
 
