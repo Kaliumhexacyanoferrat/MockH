@@ -1,6 +1,6 @@
 ﻿using GenHTTP.Api.Protocol;
 
-using Basics = GenHTTP.Modules.Basics;
+using Red = GenHTTP.Modules.Redirects;
 
 namespace MockH.Builder;
 
@@ -66,7 +66,7 @@ public class IncompleteRule
     /// <param name="location">The absolute URL pointing to the new location of the resource</param>
     /// <param name="temporary">true for HTTP 307, false for HTTP 301</param>
     /// <returns>A rule to be used with the mock server</returns>
-    public Rule Redirect(string location, bool temporary = true) => new(Methods, Path, (IRequest request) => Basics.Redirect.To(location).Mode(temporary));
+    public Rule Redirect(string location, bool temporary = true) => new(Methods, Path, () => Red.Redirect.To(location).Mode(temporary));
 
     /// <summary>
     /// Executes the given delegate to determine the response to be sent
