@@ -10,9 +10,9 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<ImplicitUsings>true</ImplicitUsings>
 
-		<AssemblyVersion>1.12.0.0</AssemblyVersion>
-		<FileVersion>1.12.0.0</FileVersion>
-		<Version>1.12.0</Version>
+		<AssemblyVersion>1.12.1.0</AssemblyVersion>
+		<FileVersion>1.12.1.0</FileVersion>
+		<Version>1.12.1</Version>
 
 		<Authors>Andreas Nägeli</Authors>
 
@@ -26,9 +26,9 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		
+
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	
+
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -36,10 +36,10 @@
 		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
 		<None Include="..\README.md" Pack="true" PackagePath="\" />
 
-		<PackageReference Include="GenHTTP.Core" Version="10.0.0" />
+		<PackageReference Include="GenHTTP.Core" Version="10.1.0" />
 
-		<PackageReference Include="GenHTTP.Modules.Functional" Version="10.0.0" />
-        <PackageReference Include="GenHTTP.Modules.Redirects" Version="10.0.0" />
+		<PackageReference Include="GenHTTP.Modules.Functional" Version="10.1.0" />
+        <PackageReference Include="GenHTTP.Modules.Redirects" Version="10.1.0" />
 
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
 
