@@ -36,7 +36,7 @@
 		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
 		<None Include="..\README.md" Pack="true" PackagePath="\" />
 
-		<PackageReference Include="GenHTTP.Core" Version="10.1.0" />
+		<PackageReference Include="GenHTTP.Core" Version="10.3.0" />
 
 		<PackageReference Include="GenHTTP.Modules.Functional" Version="10.1.0" />
         <PackageReference Include="GenHTTP.Modules.Redirects" Version="10.1.0" />
