@@ -41,7 +41,7 @@
 		<PackageReference Include="GenHTTP.Modules.Functional" Version="10.5.0" />
         <PackageReference Include="GenHTTP.Modules.Redirects" Version="10.5.0" />
 
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.103" PrivateAssets="All" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.201" PrivateAssets="All" />
 
 	</ItemGroup>
 
