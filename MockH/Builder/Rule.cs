@@ -11,34 +11,34 @@ namespace MockH.Builder;
 public class Rule
 {
 
-        #region Get-/Setters
+    #region Get-/Setters
 
-    private HashSet<FlexibleRequestMethod> Methods { get; }
+    private HashSet<RequestMethod> Methods { get; }
 
     private string? Path { get; }
 
     private Delegate Action { get; }
 
-        #endregion
+    #endregion
 
-        #region Initialization
+    #region Initialization
 
-    internal Rule(HashSet<FlexibleRequestMethod> methods, string? path, Delegate action)
+    internal Rule(HashSet<RequestMethod> methods, string? path, Delegate action)
     {
         Methods = methods;
         Path = path;
         Action = action;
     }
 
-        #endregion
+    #endregion
 
-        #region Functionality
+    #region Functionality
 
     internal void AddTo(InlineBuilder builder)
     {
         builder.On(Action, Methods, Path);
     }
 
-        #endregion
+    #endregion
 
 }
