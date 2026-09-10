@@ -7,7 +7,7 @@
 public class StaticPortProvider : IPortProvider
 {
 
-#if NET8_0
+#if NET10_0
     private static int _nextPort = 20000;
 #else
     private static int _nextPort = 30000;
