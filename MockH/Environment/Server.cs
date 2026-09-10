@@ -4,6 +4,7 @@ using GenHTTP.Api.Infrastructure;
 
 using GenHTTP.Modules.Functional;
 using GenHTTP.Modules.Functional.Provider;
+using GenHTTP.Modules.Reflection;
 
 namespace MockH.Environment;
 
@@ -44,7 +45,8 @@ public class Server : IAsyncDisposable
 
     private static InlineBuilder SetupHandler(List<Rule> rules)
     {
-        var builder = Inline.Create();
+        var builder = Inline.Create()
+                            .ExecutionMode(ExecutionMode.Reflection);
 
         foreach (var rule in rules)
         {

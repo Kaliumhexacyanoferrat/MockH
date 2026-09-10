@@ -35,8 +35,10 @@ public class RunTests : ServerTest
 
         using var response = await GetAsync(server);
 
+        var content = await response.Content.ReadAsStringAsync();
+
         Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-        Assert.AreEqual("{\"intValue\":42,\"stringValue\":\"The answer\"}", await response.Content.ReadAsStringAsync());
+        Assert.AreEqual("{\"intValue\":42,\"stringValue\":\"The answer\"}", content);
     }
 
     [TestMethod]

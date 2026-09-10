@@ -17,7 +17,7 @@ public class IncompleteRule
 
     #region Get-/Setters
 
-    private HashSet<FlexibleRequestMethod> Methods { get; }
+    private HashSet<RequestMethod> Methods { get; }
 
     private string? Path { get; }
 
@@ -32,7 +32,7 @@ public class IncompleteRule
     /// <param name="method">The method the rule should match</param>
     /// <param name="path">The path the rule should match (e.g. "/api/users")</param>
     public IncompleteRule(RequestMethod method, string? path)
-        : this(new HashSet<FlexibleRequestMethod>() { new(method) }, path) { }
+        : this(new HashSet<RequestMethod>() { method }, path) { }
 
     /// <summary>
     /// Creates a new rule that will match the specified HTTP methods
@@ -40,7 +40,7 @@ public class IncompleteRule
     /// </summary>
     /// <param name="methods">The methods the rule should match</param>
     /// <param name="path">The path the rule should match (e.g. "/api/users")</param>
-    public IncompleteRule(HashSet<FlexibleRequestMethod> methods, string? path)
+    public IncompleteRule(HashSet<RequestMethod> methods, string? path)
     {
         Methods = methods;
         Path = path;
@@ -61,7 +61,7 @@ public class IncompleteRule
 
     /// <summary>
     /// Responds with a "Location" header and a status code indicating that
-    /// the resource has moved. 
+    /// the resource has moved.
     /// </summary>
     /// <param name="location">The absolute URL pointing to the new location of the resource</param>
     /// <param name="temporary">true for HTTP 307, false for HTTP 301</param>
@@ -78,7 +78,7 @@ public class IncompleteRule
     /// May access path or query paramters, the body of the request and the entire
     /// request. Allows to return payload to be serialized, exceptions, streams or
     /// an entire response to be sent to the client.
-    /// 
+    ///
     /// For typical examples, see the GitHub documentation.
     /// </remarks>
     public Rule Run(Delegate action) => new(Methods, Path, action);
