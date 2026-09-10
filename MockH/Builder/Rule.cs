@@ -1,6 +1,7 @@
 ﻿using GenHTTP.Api.Protocol;
 
 using GenHTTP.Modules.Functional.Provider;
+using GenHTTP.Modules.Reflection;
 
 namespace MockH.Builder;
 
