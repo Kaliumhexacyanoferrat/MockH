@@ -77,7 +77,7 @@ public class Server : IAsyncDisposable
                 return path;
             }
 
-            if (path.StartsWith("/"))
+            if (path.StartsWith('/'))
             {
                 actualPath = path;
             }
