@@ -73,9 +73,13 @@ On.Post().Run((Stream body) => body.Length);
 
 ```csharp
 using GenHTTP.Api.Protocol;
+using GenHTTP.Modules.Reflection;
 
 // directly access request and response
 On.Get().Run((IRequest request) => request.Respond().Status(ResponseStatus.BadRequest));
+
+// return a value with a custom status and headers
+On.Get().Run(() => new Result<MyClass>(new(42, "The answer")).Status(ResponseStatus.Accepted).Header("X-Custom", "Value"));
 
 // return any handler provided by the GenHTTP framework, e.g. a static website
 // see https://genhttp.org/documentation/content/
