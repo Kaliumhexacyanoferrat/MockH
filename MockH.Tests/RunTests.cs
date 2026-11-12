@@ -1,6 +1,7 @@
 ﻿using GenHTTP.Api.Protocol;
 using GenHTTP.Modules.DirectoryBrowsing;
 using GenHTTP.Modules.IO;
+using GenHTTP.Modules.Reflection;
 using System.Net;
 
 namespace MockH.Tests;
@@ -108,6 +109,21 @@ public class RunTests : ServerTest
         using var response = await GetAsync(server);
 
         Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task TestResult()
+    {
+        await using var server = await MockServer.RunAsync
+        (
+            On.Get().Run(() => new Result<MyClass>(new(42, "The answer")).Status(ResponseStatus.Accepted).Header("X-Custom", "Value"))
+        );
+
+        using var response = await GetAsync(server);
+
+        Assert.AreEqual(HttpStatusCode.Accepted, response.StatusCode);
+        Assert.AreEqual("Value", response.Headers.GetValues("X-Custom").Single());
+        Assert.AreEqual("{\"intValue\":42,\"stringValue\":\"The answer\"}", await response.Content.ReadAsStringAsync());
     }
 
     [TestMethod]
