@@ -1,6 +1,6 @@
 # MockH
 
-[![Build](https://github.com/Kaliumhexacyanoferrat/MockH/actions/workflows/build.yml/badge.svg)](https://github.com/Kaliumhexacyanoferrat/MockH/actions/workflows/build.yml) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Kaliumhexacyanoferrat_MockH&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Kaliumhexacyanoferrat_MockH) [![nuget Package](https://img.shields.io/nuget/v/MockH.svg)](https://www.nuget.org/packages/MockH/)
+[![View - Documentation](https://img.shields.io/badge/view-Documentation-AB54FF)](https://mockh.genhttp.run/) [![Build](https://github.com/Kaliumhexacyanoferrat/MockH/actions/workflows/build.yml/badge.svg)](https://github.com/Kaliumhexacyanoferrat/MockH/actions/workflows/build.yml) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Kaliumhexacyanoferrat_MockH&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Kaliumhexacyanoferrat_MockH) [![nuget Package](https://img.shields.io/nuget/v/MockH.svg)](https://www.nuget.org/packages/MockH/)
 
 This library provides a .NET / C# HTTP mock server for integration, component and acceptance tests by returning configured responses.
 
