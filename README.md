@@ -50,6 +50,9 @@ private record MyClass(int IntValue, string StringValue);
 
 On.Get().Run(() => new MyClass(42, "The answer"));
 
+// execute logic and throw an exception with mapped status code
+On.Get().Run(() => new ProviderException(ResponseStatus.ExpectationFailed, "Did not expect this tbh"));
+
 // execute logic asynchronously
 On.Get().Run(async () => await ...);
 
