@@ -74,10 +74,7 @@ using GenHTTP.Api.Protocol;
 // directly access request and response
 On.Get().Run((IRequest request) => request.Respond().Status(ResponseStatus.BadRequest));
 
-// return a handler provided by the GenHTTP framework, e.g. a website
+// return any handler provided by the GenHTTP framework, e.g. a static website
 // see https://genhttp.org/documentation/content/
-// can be useful if you want to test some kind of website crawler
-// requires the GenHTTP.Modules.DirectoryBrowsing package
-// (using GenHTTP.Modules.DirectoryBrowsing; using GenHTTP.Modules.IO;)
 On.Get().Run(() => Listing.From(ResourceTree.FromDirectory("/var/www")));
 ```
